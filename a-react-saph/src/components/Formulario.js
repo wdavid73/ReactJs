@@ -13,7 +13,7 @@ export default class Formulario extends Component {
   }
 
   cotizar = (e) => {
-    e.preventDefault()
+    //e.preventDefault()
 
     //leer refs del plan
     const plan = this.planBasicoRef.current.checked
@@ -25,7 +25,6 @@ export default class Formulario extends Component {
       marca: this.marcaRef.current.value,
       year: this.yearRef.current.value,
       plan: plan
-
     }
 
     //enviar datos al app 
