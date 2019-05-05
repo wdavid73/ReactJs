@@ -13,7 +13,7 @@ export default class Formulario extends Component {
   }
 
   cotizar = (e) => {
-    //e.preventDefault()
+    e.preventDefault()
 
     //leer refs del plan
     const plan = this.planBasicoRef.current.checked
