@@ -14,11 +14,8 @@ export default class Forms extends Component {
     }
 
     algo = (e) => {
-        e.preventDeafult()
+        e.preventDefault()
 
-        const gender = this.genderRef.current.checked
-            ? 'masculino'
-            : 'femenino';
 
         const info = {
             primerNombre: this.firstNameRef.current.value,
@@ -27,7 +24,7 @@ export default class Forms extends Component {
             ciudad: this.cityRef.current.value,
             celular: this.cellphoneRef.current.value,
             telefono: this.phoneRef.current.value,
-            genero: gender
+            genero: this.genderRef.current.value
         }
 
         this.props.resumen(info)

@@ -11,8 +11,8 @@ class App extends Component {
     informacion: {}
   }
 
-  resumen = (info) => {
-    const { primerNombre, segundoNombre, email, ciudad, celular, telefono, genero } = info
+  resumen = (infom) => {
+    const { primerNombre, segundoNombre, email, ciudad, celular, telefono, genero } = infom
 
     const datosForm = {
       primerNombreF: primerNombre,
@@ -29,16 +29,11 @@ class App extends Component {
     })
   }
   render() {
+    console.log(this.state.informacion)
     return (
       <div className="App">
-
-
         <Form resumen={this.resumen}
         />
-
-
-
-
         <Cards
           info={this.state.informacion}
         />
