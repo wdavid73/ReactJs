@@ -2,13 +2,23 @@ body {
   background-color: #282c34;
 }
 
+.contenedor-form{
+  max-width: 50%;  
+  float: left;
+}
 
 .contenedor-formulario{
-  max-width: 600px;
+  width: 100%;
   color :white;
 }
 
-.cards{
-  width: 18rem;
+.contenedor-cards{
+max-width: 50%;
+
+float: right;
+}
+
+.card-resumen{
+  max-width: 100%;
   margin: 0 auto;
 }

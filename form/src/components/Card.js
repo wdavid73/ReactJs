@@ -2,28 +2,33 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card'
 
 export default class Cards extends Component {
+    mostrarInformacion = () => {
+        const { primerNombre, segundoNombre, email, ciudad, celular, telefono, genero } = this.props.info
+        if (!primerNombre || !segundoNombre || !email || !ciudad || !celular || !telefono || !genero) {
+            return null
+        }
+        return (
+            <div className="card-resumen">
+                <Card className="mt-5 mr-5" bg="dark" text="white" border="primary">
+                    <Card.Header>Informacion</Card.Header>
+                    <Card.Body>
+                        <Card.Title>{primerNombre} {segundoNombre}</Card.Title>
+                        <Card.Subtitle className="mb-3">{email}</Card.Subtitle>
+                        <Card.Text>{ciudad}</Card.Text>
+                        <Card.Text>{celular}</Card.Text>
+                        <Card.Text>{telefono}</Card.Text>
+                        <Card.Text>{genero}</Card.Text>
+                    </Card.Body>
+                </Card>
+            </div>
+        )
+    }
+
     render() {
         return (
-            <div className="cards">
-                <div>
-                    <Card className="mt-5" bg="dark" text="white" border="primary">
-                    <Card.Header>Header</Card.Header>
-                        <Card.Body>
-                            <Card.Title>Titulo de la Card</Card.Title>
-                            <Card.Subtitle className="mb-3">Subtitulo de la Card</Card.Subtitle>
-                            <Card.Text>
-                                texto en la card adfubadifboafoadofjaojdfojadnf
-                                adfnojknadpfnpadnfpnapkdfnpkandfpad
-                                +fandkfn da fajdf nadf adf adfnad
-                        </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </div>
-            </div>
-
-
+            <React.Fragment>
+                {this.mostrarInformacion()}
+            </React.Fragment>
         )
     }
 }
