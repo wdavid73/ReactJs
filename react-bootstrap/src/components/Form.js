@@ -5,7 +5,7 @@ export default class Forms extends Component {
     constructor(props) {
         super(props);
         this.firstNameRef = React.createRef();
-        this.secondNameRef = React.createRef();
+        this.primerApellidoRef = React.createRef();
         this.emailRef = React.createRef();
         this.cityRef = React.createRef();
         this.cellphoneRef = React.createRef();
@@ -19,7 +19,7 @@ export default class Forms extends Component {
 
         const info = {
             primerNombre: this.firstNameRef.current.value,
-            segundoNombre: this.secondNameRef.current.value,
+            primerApellido: this.primerApellidoRef.current.value,
             email: this.emailRef.current.value,
             ciudad: this.cityRef.current.value,
             celular: this.cellphoneRef.current.value,
@@ -31,7 +31,7 @@ export default class Forms extends Component {
     }
     render() {
         return (
-            <div className="contenedor-formulario mt-4 ml-4">
+            <div className="contenedor-formulario mt-4">
                 <Form onSubmit={this.algo}>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formFirstName">
@@ -39,9 +39,9 @@ export default class Forms extends Component {
                             <Form.Control type="text" placeholder="Ingrese su Primer Nombre" ref={this.firstNameRef} />
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formSecondName">
-                            <Form.Label>Segundo Nombre</Form.Label>
-                            <Form.Control type="text" placeholder="Ingrese su Segundo Nombre" ref={this.secondNameRef} />
+                        <Form.Group as={Col} controlId="formFirstLastName">
+                            <Form.Label>Primer Apellido</Form.Label>
+                            <Form.Control type="text" placeholder="Ingrese su Primer Apellido" ref={this.primerApellidoRef} />
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>

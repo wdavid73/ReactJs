@@ -4,7 +4,10 @@ import './css/index.css';
 //Components
 
 import Form from './components/Form'
-import Cards from './components/Card';
+import Cards from './components/Card'
+import Presentacion from './components/Present'
+import NavBar from './components/Navbar'
+import Alertas from './components/Alertas'
 
 class App extends Component {
   state = {
@@ -12,11 +15,11 @@ class App extends Component {
   }
 
   resumen = (infom) => {
-    const { primerNombre, segundoNombre, email, ciudad, celular, telefono, genero } = infom
+    const { primerNombre, primerApellido, email, ciudad, celular, telefono, genero } = infom
 
     const datosForm = {
       primerNombreF: primerNombre,
-      segundoNombreF: segundoNombre,
+      primerApellidoF: primerApellido,
       emailF: email,
       ciudadF: ciudad,
       celularF: celular,
@@ -32,11 +35,20 @@ class App extends Component {
     console.log(this.state.informacion)
     return (
       <div className="App">
+
+        <NavBar />
+
+        <Presentacion />
+
         <Form resumen={this.resumen}
         />
+        {/* 
         <Cards
           info={this.state.informacion}
         />
+        */}
+        <Alertas informacion={this.state.informacion} />
+
 
       </div>
     );

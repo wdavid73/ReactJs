@@ -10,6 +10,9 @@ body {
 .contenedor-formulario{
   width: 100%;
   color :white;
+  display : flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contenedor-cards{
@@ -22,3 +25,15 @@ float: right;
   max-width: 100%;
   margin: 0 auto;
 }
+.presentacion{
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center
+   
+}
+.alertas{
+  width: 500px
+}
+
+
+

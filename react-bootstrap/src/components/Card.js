@@ -3,8 +3,8 @@ import Card from 'react-bootstrap/Card'
 
 export default class Cards extends Component {
     mostrarInformacion = () => {
-        const { primerNombre, segundoNombre, email, ciudad, celular, telefono, genero } = this.props.info
-        if (!primerNombre || !segundoNombre || !email || !ciudad || !celular || !telefono || !genero) {
+        const { primerNombre, primerApellido, email, ciudad, celular, telefono, genero } = this.props.info
+        if (!primerNombre || !primerApellido || !email || !ciudad || !celular || !telefono || !genero) {
             return null
         }
         return (
@@ -12,7 +12,7 @@ export default class Cards extends Component {
                 <Card className="mt-5 mr-5" bg="dark" text="white" border="primary">
                     <Card.Header>Informacion</Card.Header>
                     <Card.Body>
-                        <Card.Title>{primerNombre} {segundoNombre}</Card.Title>
+                        <Card.Title>{primerNombre} {primerApellido}</Card.Title>
                         <Card.Subtitle className="mb-3">{email}</Card.Subtitle>
                         <Card.Text>{ciudad}</Card.Text>
                         <Card.Text>{celular}</Card.Text>
