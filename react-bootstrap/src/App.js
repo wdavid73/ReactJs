@@ -48,7 +48,9 @@ class App extends Component {
         />
         
         <Alertas informacion={this.state.informacion} />
+      <div className="presentacion2">
 
+      </div>
 
       </div>
     );

@@ -13,7 +13,7 @@ class Alertas extends Component {
         }
         return (
             <div className="alertas">
-                <Alert show={this.state.show} variant="success">
+                <Alert show={this.state.show} variant="success" className="mt-5 mr-5 mb-3 ml-3">
                     <Alert.Heading> {primerNombre} {primerApellido}</Alert.Heading>
                     <p>{email} , {celular} ,{telefono} , {ciudad} ,{genero}  </p>
                     <hr />
@@ -23,7 +23,7 @@ class Alertas extends Component {
                     </Button>
                     </div>
                 </Alert>
-                {!this.state.show && <Button onClick={handleShow}>Mostrar Alerta</Button>}
+                {!this.state.show && <Button onClick={handleShow} className="mt-5 mr-5 mb-3 ml-3">Mostrar Alerta</Button>}
             </div>
         )
     }
