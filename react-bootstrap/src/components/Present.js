@@ -11,9 +11,9 @@ class Presentacion extends Component {
             <div className="presentacion">
                 <Jumbotron>
                     <h1 >
-                        {/*<span className="logo">
+                        <span className="logo">
                             <img src={logo} alt="logo" style={{ width: '70px', margin: '0 auto' }} />
-                        </span> */}
+                        </span> 
                         Probando React con Bootstrap
                         
                     </h1>

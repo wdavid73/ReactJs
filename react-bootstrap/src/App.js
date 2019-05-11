@@ -1,30 +1,30 @@
 /*Author : Guicho73 */
-import React, { Component } from 'react';
-import './css/index.css';
+import React, { Component } from "react";
+import "./css/index.css";
 //Components
 
-import Form from './components/Form'
-import Cards from './components/Card'
-import Presentacion from './components/Present'
-import NavBar from './components/Navbar'
-import Alertas from './components/Alertas'
+import Form from "./components/Form";
+import Cards from "./components/Card";
+import Presentacion from "./components/Present";
+import NavBar from "./components/Navbar";
+import Alertas from "./components/Alertas";
 
 class App extends Component {
   state = {
     informacion: {}
   }
 
-  resumen = (infom) => {
-    const { primerNombre, primerApellido, email, ciudad, celular, telefono, genero } = infom
+  resumen = (info) => {
+    const { primerNombre, primerApellido, email, ciudad, celular, telefono, genero } = info
 
     const datosForm = {
-      primerNombreF: primerNombre,
-      primerApellidoF: primerApellido,
-      emailF: email,
-      ciudadF: ciudad,
-      celularF: celular,
-      telefonoF: telefono,
-      generoF: genero
+      primerNombre: primerNombre,
+      primerApellido: primerApellido,
+      email: email,
+      ciudad: ciudad,
+      celular: celular,
+      telefono: telefono,
+      genero: genero
     }
 
     this.setState({
@@ -32,7 +32,7 @@ class App extends Component {
     })
   }
   render() {
-    console.log(this.state.informacion)
+    
     return (
       <div className="App">
 
@@ -40,13 +40,13 @@ class App extends Component {
 
         <Presentacion />
 
-        <Form resumen={this.resumen}
+        <Form res={this.resumen}
         />
-        {/* 
+        
         <Cards
           info={this.state.informacion}
         />
-        */}
+        
         <Alertas informacion={this.state.informacion} />
 
 
@@ -55,4 +55,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
