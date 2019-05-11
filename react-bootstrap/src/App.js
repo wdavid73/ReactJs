@@ -8,6 +8,7 @@ import Cards from "./components/Card";
 import Presentacion from "./components/Present";
 import NavBar from "./components/Navbar";
 import Alertas from "./components/Alertas";
+import Slider from './components/Slider'
 
 class App extends Component {
   state = {
@@ -37,9 +38,9 @@ class App extends Component {
       <div className="App">
 
         <NavBar />
-
-        <Presentacion />
-
+        <Slider/>
+    
+        {/*<Presentacion />*/}
         <Form res={this.resumen}
         />
         
@@ -48,9 +49,8 @@ class App extends Component {
         />
         
         <Alertas informacion={this.state.informacion} />
-      <div className="presentacion2">
-
-      </div>
+      
+        
 
       </div>
     );
