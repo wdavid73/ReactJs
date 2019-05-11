@@ -5,7 +5,7 @@ import "./css/index.css";
 
 import Form from "./components/Form";
 import Cards from "./components/Card";
-import Presentacion from "./components/Present";
+//import Presentacion from "./components/Present";
 import NavBar from "./components/Navbar";
 import Alertas from "./components/Alertas";
 import Slider from './components/Slider'
@@ -32,6 +32,11 @@ class App extends Component {
       informacion: datosForm
     })
   }
+
+  /*TODO:  
+    agregar un overlay para las validaciones
+    agregar un spinner al boton de generar
+     */
   render() {
     
     return (
